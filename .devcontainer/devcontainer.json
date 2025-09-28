@@ -1,0 +1,6 @@
+{
+  "name": "C Language Dev Container",
+  "image": "ghcr.io/tsuji-riya/my-c-env:latest",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root"
+}
