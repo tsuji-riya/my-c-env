@@ -2,5 +2,12 @@
   "name": "C Language Dev Container",
   "image": "ghcr.io/tsuji-riya/my-c-env:latest",
   "workspaceFolder": "/workspace",
+  "mounts": [
+    {
+      "source": "./",
+      "target": "/workspace",
+      "type": "bind"
+    }
+  ],
   "remoteUser": "root"
 }
