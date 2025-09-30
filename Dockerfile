@@ -7,8 +7,16 @@ RUN apt-get update && apt-get install -y \
     zsh \
     curl \
     wget \
-    vim
+    vim \
+    neovim
+
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+RUN chsh -s $(which zsh)
+
+ENV USER=root
+ENV SHELL=/bin/zsh
 
 WORKDIR /workspace
 
-CMD ["/bin/zsh"]
+CMD ["zsh"]
